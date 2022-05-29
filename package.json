@@ -1,0 +1,94 @@
+{
+	"name": "vue3-vite-ts-cli",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite --config ./config/vite.config.dev.ts",
+		"build": "vue-tsc --noEmit && vite build --config ./config/vite.config.prod.ts",
+		"report": "cross-env REPORT=true pnpm build",
+		"preview": "vite preview",
+		"eslint": "eslint --ext .js,.vue,.ts,.jsx --ignore-path .gitignore --fix src config",
+		"prettier": "prettier --write .",
+		"lint:style": "stylelint \"src/*.{css,scss}\"",
+		"fix:style": "stylelint --fix \"src/*.{css,scss}\"",
+		"commit": "git-cz",
+		"lint-staged": "npx lint-staged",
+		"prepare": "husky install"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"lint-staged": {
+		"*.{vue,js,ts,jsx,tsx}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"*.{less,css,scss}": [
+			"stylelint --fix"
+		],
+		"*.{html,json,yaml,md}": [
+			"prettier --write"
+		]
+	},
+	"dependencies": {
+		"@icon-park/vue-next": "^1.4.0",
+		"@vee-validate/i18n": "^4.5.11",
+		"@vee-validate/rules": "^4.5.11",
+		"animate.css": "^4.1.1",
+		"gsap": "^3.10.4",
+		"mitt": "^3.0.0",
+		"nprogress": "^0.2.0",
+		"pinia": "^2.0.14",
+		"vee-validate": "^4.5.8",
+		"vue": "^3.2.25",
+		"vue-router": "^4.0.15",
+		"yup": "^0.32.11"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.0.1",
+		"@commitlint/config-conventional": "^17.0.0",
+		"@types/mockjs": "^1.0.6",
+		"@types/node": "^17.0.35",
+		"@types/nprogress": "^0.2.0",
+		"@typescript-eslint/eslint-plugin": "^5.26.0",
+		"@typescript-eslint/parser": "^5.26.0",
+		"@vitejs/plugin-legacy": "^1.8.2",
+		"@vitejs/plugin-vue": "^2.3.3",
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.16.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^2.7.1",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-vue": "^9.0.1",
+		"husky": "^8.0.1",
+		"lint-staged": "^12.4.2",
+		"mockjs": "^1.1.0",
+		"postcss": "^8.4.14",
+		"postcss-html": "^1.4.1",
+		"postcss-scss": "^4.0.4",
+		"prettier": "^2.6.2",
+		"sass": "^1.52.1",
+		"stylelint": "^14.8.4",
+		"stylelint-config-prettier": "^8.0.2",
+		"stylelint-config-rational-order": "^0.1.2",
+		"stylelint-config-recommended-vue": "^1.4.0",
+		"stylelint-config-standard": "^25.0.0",
+		"stylelint-config-standard-scss": "^3.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-prettier": "^2.0.0",
+		"stylelint-scss": "^4.2.0",
+		"typescript": "^4.5.4",
+		"unplugin-auto-import": "^0.8.5",
+		"unplugin-vue-components": "^0.17.21",
+		"vite": "^2.9.9",
+		"vite-plugin-compression": "^0.5.1",
+		"vite-plugin-mock": "^2.9.6",
+		"vite-svg-loader": "^3.3.0",
+		"vue-tsc": "^0.34.7"
+	}
+}

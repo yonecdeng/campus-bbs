@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"typeRoots": [
+			//	要包含的类型声明文件路径列表
+			"node_modules/@types",
+			"src/types"
+		],
+		"target": "esnext",
+		"useDefineForClassFields": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"strict": true,
+		"jsx": "preserve",
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"lib": ["esnext", "dom"],
+		"skipLibCheck": true,
+		"baseUrl": "./",
+		"paths": {
+			//模块名到基于 baseUrl的路径映射的列表（配置别名）
+			"@": ["src"],
+			"@/*": ["src/*"]
+		}
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}
