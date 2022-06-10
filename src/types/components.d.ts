@@ -4,6 +4,9 @@
 
 declare module 'vue' {
 	export interface GlobalComponents {
+		EchartsBarChart: typeof import('./../components/echarts/barChart/index.vue')['default']
+		EchartsBarLineChart: typeof import('./../components/echarts/bar-line-chart/index.vue')['default']
+		EchartsLineChart: typeof import('./../components/echarts/lineChart/index.vue')['default']
 		ListAnimateList: typeof import('./../components/list/animateList/index.vue')['default']
 		Menu: typeof import('./../components/menu/index.vue')['default']
 	}

@@ -1,6 +1,13 @@
 @import url('./themeVar.scss');
 
+html{
+    width: 100%;
+    height: 100%;
+}
+
 body{
+    width: 100%;
+    height: 100%;
     color: var(--font-color);
     background-color: var(--background-color);
 }
