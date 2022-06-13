@@ -17,7 +17,7 @@ appStore.initTheme() // 初始化主题
 	<component :is="icon['Home']"></component>
 	<button @click="appStore.toggleTheme()">切换主题</button>
 	<ListAnimateList tag="ul" :duration="5" :delay="2">
-		<li v-for="(item, index) of [1, 2, 1, 2, 1, 2]" :key="index" :data-index="index">{{ item }}</li>
+		<li v-for="(item, index) of [1, 2, 1, 2, 1, 2, 3]" :key="index" :data-index="index">{{ item }}</li>
 	</ListAnimateList>
 	<router-view></router-view>
 </template>
