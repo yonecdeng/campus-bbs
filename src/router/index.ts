@@ -12,7 +12,24 @@ const router = createRouter({
 	routes: [
 		{
 			path: '/',
-			redirect: '/todos/home',
+			redirect: '/home',
+		},
+		{
+			path: '/home',
+			name: 'home',
+			component: () => import('@/views/home/index.vue'),
+			children: [
+				{
+					path: '/home/AAA',
+					name: 'AAA',
+					component: () => import('@/views/AAA/index.vue'),
+				},
+				{
+					path: '/home/BBB',
+					name: 'BBB',
+					component: () => import('@/views/AAA/index.vue'),
+				},
+			],
 		},
 		{
 			path: '/todos',

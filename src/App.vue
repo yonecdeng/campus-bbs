@@ -3,6 +3,7 @@ import * as icon from '@icon-park/vue-next'
 import { useDebounceFn } from '@vueuse/core'
 import { Ref } from 'vue'
 import { useAppStore } from '@/store'
+import topBar from '@/views/topBar.vue'
 
 const test = ref('test')
 console.log(test.value)
@@ -11,15 +12,32 @@ appStore.initTheme() // 初始化主题
 </script>
 
 <template>
-	<!--测试icon能否加载、动画能够播放、切换主题能否使用-->
-	<Menu></Menu>
+	<!-- 测试icon能否加载、动画能够播放、切换主题能否使用-->
+	<!-- <Menu></Menu>
 	<component :is="icon['DashboardOne']"></component>
 	<component :is="icon['Home']"></component>
 	<button @click="appStore.toggleTheme()">切换主题</button>
 	<ListAnimateList tag="ul" :duration="5" :delay="2">
 		<li v-for="(item, index) of [1, 2, 1, 2, 1, 2, 3]" :key="index" :data-index="index">{{ item }}</li>
 	</ListAnimateList>
-	<router-view></router-view>
+	<router-view></router-view> -->
+	<div>
+		<topBar />
+		<router-view class="view"></router-view>
+	</div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+div {
+	height: 100vh;
+	position: relative;
+
+	.view {
+		position: absolute;
+		top: 66px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+</style>
