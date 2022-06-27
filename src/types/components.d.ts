@@ -9,6 +9,11 @@ declare module 'vue' {
 		EchartsLineChart: typeof import('./../components/echarts/lineChart/index.vue')['default']
 		ListAnimateList: typeof import('./../components/list/animateList/index.vue')['default']
 		Menu: typeof import('./../components/menu/index.vue')['default']
+		Plate: typeof import('./../components/plate/index.vue')['default']
+		PlatePostFloor: typeof import('./../components/plate/post/floor.vue')['default']
+		PlatePostTypeA: typeof import('./../components/plate/post/typeA.vue')['default']
+		PlatePostTypeB: typeof import('./../components/plate/post/typeB.vue')['default']
+		PlatePostTypeC: typeof import('./../components/plate/post/typeC.vue')['default']
 	}
 }
 
