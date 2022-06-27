@@ -77,7 +77,6 @@ const beforeColor = computed(() => {
 	box-sizing: border-box;
 	width: 100%;
 	min-width: 360px;
-	max-width: 480px;
 	height: 280px;
 	background: #ffffff;
 	border: 1px solid #eeeeee;

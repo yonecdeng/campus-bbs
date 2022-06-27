@@ -249,6 +249,28 @@ const postDataList = reactive<postData[]>([
 		isSticky: false,
 		isPick: false,
 	},
+	{
+		postId: 4,
+		postName: '帖子D',
+		postAuthor: '发帖人ID',
+		postContent: '哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的',
+		postUpdateTime: '2022-06-18 19:40',
+		commentNumber: 100,
+		watcherNumber: 150,
+		isSticky: false,
+		isPick: false,
+	},
+	{
+		postId: 5,
+		postName: '帖子D',
+		postAuthor: '发帖人ID',
+		postContent: '哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的',
+		postUpdateTime: '2022-06-18 19:40',
+		commentNumber: 100,
+		watcherNumber: 150,
+		isSticky: false,
+		isPick: false,
+	},
 ])
 
 // 楼层信息
@@ -267,6 +289,13 @@ const floorDataList = reactive<floorData[]>([
 		floorAuthor: '发帖人ID',
 		isPostAuthor: true,
 		floorContent: `哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的\n哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
+		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
+		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
+		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
+		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
+		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
+		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
+		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
 		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
 		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
 		哈佛是工设和你是否经发局计算结果就覅好烦安家费IE家乐福自己的
@@ -461,7 +490,16 @@ function selectPost(postId: number) {
 				width: 100%;
 				height: 100%;
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
+
+				@media screen and (min-width: 1125px) and (max-width: 1495px) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				@media screen and (min-width: 1495px) {
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				grid-template-rows: repeat(auto-fill, 280px);
 				grid-gap: 10px;
 				overflow-x: hidden;
 

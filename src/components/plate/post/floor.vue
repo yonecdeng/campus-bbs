@@ -69,7 +69,7 @@ function addLike() {
 <style lang="scss" scoped>
 .postC {
 	box-sizing: border-box;
-	min-width: 460px;
+	min-width: 430px;
 	background: #ffffff;
 	border: 1px solid #eeeeee;
 	display: flex;
@@ -80,12 +80,13 @@ function addLike() {
 		border-right: 1px solid #eeeeee;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 
 		.user-image {
 			width: 84px;
 			height: 84px;
 			margin-top: 12px;
+			margin-left: 24px;
+			margin-right: 21px;
 
 			border-radius: 42px;
 			background-color: #d9d9d9;
@@ -93,6 +94,8 @@ function addLike() {
 
 		.user-id {
 			margin-top: 11px;
+			margin-left: 24px;
+			margin-right: 21px;
 
 			font-family: 'Microsoft YaHei';
 			font-style: normal;
@@ -128,6 +131,7 @@ function addLike() {
 		}
 
 		.main-content {
+			min-height: 160px;
 			padding: 20px 30px;
 
 			font-family: 'Microsoft YaHei';
@@ -136,7 +140,7 @@ function addLike() {
 			font-size: 14px;
 			color: #1f1f1f;
 
-			white-space: pre;
+			white-space: pre-wrap;
 		}
 
 		.infoBar {

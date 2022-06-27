@@ -27,6 +27,9 @@ appStore.initTheme() // 初始化主题
 
 <style lang="scss" scoped>
 .container {
+	// width: 1920px;
+	// height: 1080px;
+	min-width: 1275px;
 	height: 100vh;
 	position: relative;
 
