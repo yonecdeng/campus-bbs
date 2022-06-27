@@ -7,9 +7,16 @@ declare module 'vue' {
 		EchartsBarChart: typeof import('./../components/echarts/barChart/index.vue')['default']
 		EchartsBarLineChart: typeof import('./../components/echarts/bar-line-chart/index.vue')['default']
 		EchartsLineChart: typeof import('./../components/echarts/lineChart/index.vue')['default']
-		Index: typeof import('./../components/index/index.vue')['default']
 		ListAnimateList: typeof import('./../components/list/animateList/index.vue')['default']
 		Menu: typeof import('./../components/menu/index.vue')['default']
+		Plate: typeof import('./../components/plate/index.vue')['default']
+		PlateFloor: typeof import('./../components/plate/floor.vue')['default']
+		PlatePostD: typeof import('./../components/plate/postD.vue')['default']
+		PlatePostFloor: typeof import('./../components/plate/post/floor.vue')['default']
+		PlatePostPostDetail: typeof import('./../components/plate/post/postDetail.vue')['default']
+		PlatePostTypeA: typeof import('./../components/plate/post/typeA.vue')['default']
+		PlatePostTypeB: typeof import('./../components/plate/post/typeB.vue')['default']
+		PlatePostTypeC: typeof import('./../components/plate/post/typeC.vue')['default']
 	}
 }
 

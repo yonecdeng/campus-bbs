@@ -2,7 +2,7 @@
 	<div class="index">
 		<div class="container">
 			<sideBar />
-			<router-view class="index-view"></router-view>
+			<router-view class="plate"></router-view>
 		</div>
 	</div>
 </template>
@@ -17,7 +17,7 @@ import sideBar from '@/views/home/sideBar.vue'
 		height: 100%;
 		display: flex;
 
-		.index-view {
+		.plate {
 			flex: 1;
 		}
 	}

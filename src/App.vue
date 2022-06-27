@@ -3,10 +3,8 @@ import * as icon from '@icon-park/vue-next'
 import { useDebounceFn } from '@vueuse/core'
 import { Ref } from 'vue'
 import { useAppStore } from '@/store'
-import topBar from '@/views/topBar.vue'
+import TopBar from '@/views/TopBar/index.vue'
 
-const test = ref('test')
-console.log(test.value)
 const appStore = useAppStore()
 appStore.initTheme() // 初始化主题
 </script>
@@ -21,23 +19,24 @@ appStore.initTheme() // 初始化主题
 		<li v-for="(item, index) of [1, 2, 1, 2, 1, 2, 3]" :key="index" :data-index="index">{{ item }}</li>
 	</ListAnimateList>
 	<router-view></router-view> -->
-	<div>
-		<topBar />
+	<div class="container">
+		<TopBar />
 		<router-view class="view"></router-view>
 	</div>
 </template>
 
 <style lang="scss" scoped>
-div {
+.container {
 	height: 100vh;
 	position: relative;
 
 	.view {
 		position: absolute;
-		top: 66px;
+		top: 64px;
 		bottom: 0;
 		left: 0;
 		right: 0;
+		background-color: #f5f5f5;
 	}
 }
 </style>
